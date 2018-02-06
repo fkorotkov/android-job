@@ -4,7 +4,6 @@ container:
 check_android_task:
   gradle_cache:
     folder: ~/.gradle/caches
-  check_script: ./gradlew check --info
+  check_script: ./gradlew assemble
   cleanup_before_caching_script:
-    - rm -fr ~/.gradle/caches/4.*
     - find ~/.gradle/caches/ -name "*.lock" -type f -delete
